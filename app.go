@@ -10,11 +10,11 @@ import (
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	log.Print("Simple app running...")
-	target := os.Getenv("SIMPLE_MSG")
-	if target == "" {
-		target = ":( SIMPLE_MSG variable not defined"
+	msg := os.Getenv("SIMPLE_MSG")
+	if msg == "" {
+		msg = ":( SIMPLE_MSG variable not defined"
 	}
-	fmt.Fprintf(w, "Hello %s!\n", target)
+	fmt.Fprintf(w, "<h1>%s</h1>", msg)
 }
 
 func main() {
