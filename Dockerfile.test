@@ -1,2 +1,2 @@
-FROM nginx
+FROM registry.cn-hangzhou.aliyuncs.com/jovi/nginx:alpine
 RUN ls -al
