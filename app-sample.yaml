@@ -15,7 +15,7 @@ spec:
         run: simple-app
     spec:
       containers:
-      - image: tomcat:7
+      - image: ${IMAGE}
         imagePullPolicy: IfNotPresent
         name: tomcat
         ports:
